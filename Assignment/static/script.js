@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let tasks = [];
 
-    // Function to dynamically generate tasks list
+    
     function generateTask(task, index) {
         const li = document.createElement("li");
         li.className = "task-item";
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return li;
     }
 
-    // Function to refresh tasks list
+    
     function refreshTaskList() {
         taskList.innerHTML = "";
         tasks.forEach((task, index) => {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Event listener for adding a task
+    
     addTaskBtn.addEventListener("click", function() {
         const task = taskInput.value.trim();
         if (task !== "") {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Event listener for deleting a task
+    
     taskList.addEventListener("click", function(event) {
         if (event.target.classList.contains("delete-btn")) {
             const index = event.target.getAttribute("data-index");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Event listener for completing a task
+    
     taskList.addEventListener("click", function(event) {
         if (event.target.classList.contains("complete-btn")) {
             const index = event.target.getAttribute("data-index");

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Initialize a list to store tasks
+
 tasks = []
 
 @app.route('/')
